@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # OpenAI API Key
-os.environ.get("API_KEY")
+api_key = os.environ.get("API_KEY")
 if not api_key:
     raise ValueError("OPENAI_API_KEY environment variable not set")
 
