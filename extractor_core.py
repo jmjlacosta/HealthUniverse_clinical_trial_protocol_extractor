@@ -12,12 +12,12 @@ import subprocess
 from typing import Dict, Any, List, Optional, Tuple
 import docling
 from docling.document_converter import DocumentConverter
-# Setup logging
+
+#Logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 
-# OpenAI API Key
 api_key = os.environ.get("API_KEY")
 if not api_key:
     raise ValueError("OPENAI_API_KEY environment variable not set")
@@ -198,7 +198,6 @@ def extract_eligibility_criteria(content: str) -> Dict[str, Any]:
     if criteria_text == "Error in GPT query" or criteria_text.startswith("I'm sorry"):
         return result
     
-    # Now extract gender, age, and healthy volunteers info using a single comprehensive prompt
     criteria_details_prompt = """
     Based on the eligibility criteria below, extract these specific details:
     
@@ -1158,6 +1157,7 @@ def process_pdf_to_xml(pdf_path: str, output_xml_path: str = None) -> str:
         return xml_content
 
 
+#Main method
 def main():
     parser = argparse.ArgumentParser(description='Convert Clinical Trial Protocol PDF to XML')
     parser.add_argument('pdf_path', help='Path to the PDF file')
