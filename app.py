@@ -8,7 +8,7 @@ from extractor_core import (
     generate_xml
 )
 
-st.set_page_config(page_title="Clinical Trial Protocol Extractor", layout="wide")
+st.set_page_config(page_title="Clinicalw Trial Protocol Extractor", layout="wide")
 st.title("Clinical Trial Protocol Extractor")
 
 uploaded_file = st.file_uploader("Upload a clinical trial PDF", type=["pdf"])
