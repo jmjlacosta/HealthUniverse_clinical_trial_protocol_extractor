@@ -1,5 +1,4 @@
-# HealthUniverse_clinical_trial_protocol_extractor
-Clinical Trial Protocol Extractor → XML Generator
+# Updates
 
 15 may changes:
 1. Fixed issue where app reprocessed PDF whenever a form field was edited
